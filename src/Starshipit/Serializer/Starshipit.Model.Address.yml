@@ -1,0 +1,22 @@
+Starshipit\Model\Address:
+  exclusion_policy: NONE
+  properties:
+    name:
+      type: string
+    phone:
+      type: string
+    building:
+      type: string
+    street:
+      type: string
+    suburb:
+      type: string
+    state:
+      type: string
+    post_code:
+      type: string
+    country:
+      type: string
+    delivery_instructions:
+      type: string
+

@@ -1,0 +1,20 @@
+Starshipit\Model\Item:
+  exclusion_policy: NONE
+  properties:
+    item_id:
+      type: int
+    description:
+      type: string
+    sku:
+      type: string
+    country_of_origin:
+      type: string
+    quantity:
+      type: int
+    quantity_to_ship:
+      type: int
+    weight:
+      type: double
+    value:
+      type: double
+

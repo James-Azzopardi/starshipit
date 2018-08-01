@@ -1,0 +1,10 @@
+Starshipit\Model\Order:
+  properties:
+    success:
+      type: int
+    errors:
+      type: array<Starshipit\Model\Error>
+    order:
+      type: Starshipit\Model\OrderDetails
+      serialized_name: order
+

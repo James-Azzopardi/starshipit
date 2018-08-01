@@ -1,0 +1,9 @@
+Starshipit\Model\ErrorResponse:
+  exclusion_policy: NONE
+  properties:
+    message:
+      type: string
+    statusCode:
+      type: integer
+      serialized_name: statusCode
+

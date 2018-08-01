@@ -1,0 +1,26 @@
+Starshipit\Model\Contact:
+  exclusion_policy: NONE
+  properties:
+    name:
+      type: string
+    email:
+      type: string
+    phone:
+      type: string
+    building:
+      type: string
+    company:
+      type: string
+    street:
+      type: string
+    suburb:
+      type: string
+    city:
+      type: string
+    state:
+      type: string
+    post_code:
+      type: string
+    country:
+      type: string
+

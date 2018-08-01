@@ -1,0 +1,8 @@
+Starshipit\Model\Error:
+  exclusion_policy: NONE
+  properties:
+    message:
+      type: string
+    details:
+      type: string
+

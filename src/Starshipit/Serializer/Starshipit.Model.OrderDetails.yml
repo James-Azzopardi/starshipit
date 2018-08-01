@@ -1,0 +1,39 @@
+Starshipit\Model\OrderDetails:
+  exclusion_policy: NONE
+  properties:
+    order_id:
+      type: int
+    order_date:
+      type: DateTime<'Y-m-d\TH:i:s.u\Z'>
+    order_number:
+      type: int
+    reference:
+      type: string
+    carrier:
+      type: int
+    carrier_name:
+      type: string
+    carrier_service_code:
+      type: int
+    shipping_method:
+      type: string
+    signature_required:
+      type: int
+    currency:
+      type: string
+    sender_details:
+      type: Starshipit\Model\Contact
+      serialized_name: sender_details
+    destination:
+      type: Starshipit\Model\Address
+      serialized_name: destination
+    items:
+      type: array<Starshipit\Model\Item>
+      serialized_name: items
+    packages:
+      type: array<Starshipit\Model\Package>
+      serialized_name: packages
+    metadatas:
+      type: array<Starshipit\Model\Metadata>
+      serialized_name: metadatas
+

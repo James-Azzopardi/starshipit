@@ -1,0 +1,24 @@
+Starshipit\Model\Package:
+  exclusion_policy: NONE
+  properties:
+    package_id:
+      type: int
+    name:
+      type: string
+    weight:
+      type: double
+    height:
+      type: double
+    width:
+      type: double
+    length:
+      type: double
+    packaging_type:
+      type: string
+    carrier_service_code:
+      type: string
+    tracking_url:
+      type: string
+    shipment_type:
+      type: string
+

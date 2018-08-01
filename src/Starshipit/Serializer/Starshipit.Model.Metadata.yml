@@ -1,0 +1,8 @@
+Starshipit\Model\Metadata:
+  exclusion_policy: NONE
+  properties:
+    metafield_key:
+      type: string
+    value:
+      type: string
+
