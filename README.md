@@ -23,7 +23,7 @@ require 'vendor/autoload.php';
 
 ## TODO
 
-Most methods have not been added at this stage, only Create Order, Get Order and Create Label Methods
+Most methods have not been added at this stage, only Create Order, Get Order and Create Label Methods.
 
 ## Special Thanks
 

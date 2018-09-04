@@ -41,10 +41,8 @@ class Label
      */
     public function print(OrderModel $order)
     {
-        echo '<pre>';
         try {
-            $body = "{ 'order_id' : ".$order->getOrder()->getOrderId()." x}";
-            echo $body;
+            $body = "{ 'order_id' : ".$order->getOrder()->getOrderId()." }";
             $result = $this->getClient()->post(
                 'orders/shipment',
                 [
@@ -68,12 +66,7 @@ class Label
             );
         }
 
-        print_r((string) $result->getBody());
-        // return $this->getSerializer()->deserialize(
-        //     (string) $result->getBody(),
-        //     LabelModel::class,
-        //     'json'
-        // );
+        return $result->getBody();
     }
 }
 
