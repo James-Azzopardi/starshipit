@@ -39,7 +39,7 @@ class Label
     /**
      * @return array
      */
-    public function print(OrderModel $order)
+    public function print_label(OrderModel $order)
     {
         try {
             $body = "{ 'order_id' : ".$order->getOrder()->getOrderId()." }";
