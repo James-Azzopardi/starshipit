@@ -9,6 +9,8 @@ Starshipit\Model\Address:
       type: string
     street:
       type: string
+    company:
+      type: string
     suburb:
       type: string
     state:

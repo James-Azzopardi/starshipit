@@ -32,6 +32,9 @@
         "psr-0": {
             "Starshipit": "src/"
         }
+    },
+    "config": {
+        "platform": {"php": "5.6"}
     }
 }
 

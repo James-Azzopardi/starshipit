@@ -23,6 +23,7 @@
                   ->setState('VIC')
                   ->setPostcode('3000')
                   ->setCountry('Australia')
+                  ->setCompany('')
                   ->setDeliveryInstructions('Leave at door');
 
     $order_items = new \Starshipit\Model\Item();

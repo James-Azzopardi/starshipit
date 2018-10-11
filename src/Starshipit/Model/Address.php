@@ -32,6 +32,11 @@ class Address
     /**
      * @var string
      */
+    protected $company;
+
+    /**
+     * @var string
+     */
     protected $suburb;
 
     /**
