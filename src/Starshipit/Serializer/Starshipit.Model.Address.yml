@@ -5,6 +5,8 @@ Starshipit\Model\Address:
       type: string
     phone:
       type: string
+    email:
+      type: string
     building:
       type: string
     street:

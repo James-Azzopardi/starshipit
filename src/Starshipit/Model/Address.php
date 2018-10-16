@@ -22,6 +22,11 @@ class Address
     /**
      * @var string
      */
+    protected $email;
+
+    /**
+     * @var string
+     */
     protected $building;
 
     /**
@@ -94,6 +99,25 @@ class Address
     public function setPhone($phone)
     {
         $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $Email
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
 
         return $this;
     }

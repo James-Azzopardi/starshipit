@@ -18,6 +18,7 @@
 
     $order_address->setName('John Doe')
                   ->setPhone('0412456789')
+                  ->setEmail('test@email.com.au')
                   ->setStreet('1 Test Address')
                   ->setSuburb('Suburb')
                   ->setState('VIC')
