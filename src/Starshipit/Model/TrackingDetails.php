@@ -234,7 +234,7 @@ class TrackingDetails
      * @param string $TrackingEvents
      * @return $this
      */
-    public function getTrackingEvents($tracking_events)
+    public function getTrackingEvents()
     {
         return $this->tracking_events;
     }
