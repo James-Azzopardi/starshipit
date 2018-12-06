@@ -51,6 +51,11 @@ class Package
     /**
      * @var string
      */
+    protected $tracking_number;
+
+    /**
+     * @var string
+     */
     protected $tracking_url;
 
     /**
@@ -207,6 +212,25 @@ class Package
     public function setCarrierServiceCode($carrier_service_code)
     {
         $this->carrier_service_code = $carrier_service_code;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTrackingNumber()
+    {
+        return $this->$tracking_number;
+    }
+
+    /**
+     * @param string $TrackingNumber
+     * @return $this
+     */
+    public function setTrackingNumber($tracking_number)
+    {
+        $this->$tracking_number = $tracking_number;
 
         return $this;
     }

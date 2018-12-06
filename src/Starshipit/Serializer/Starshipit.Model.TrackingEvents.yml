@@ -1,0 +1,10 @@
+Starshipit\Model\TrackingEvents:
+  exclusion_policy: NONE
+  properties:
+    event_datetime:
+      type: DateTime<'Y-m-d\TH:i:s.u\Z'>
+    status:
+      type: string
+    details:
+      type: string
+

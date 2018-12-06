@@ -17,6 +17,8 @@ Starshipit\Model\Package:
       type: string
     carrier_service_code:
       type: string
+    tracking_number:
+      type: string
     tracking_url:
       type: string
     shipment_type:

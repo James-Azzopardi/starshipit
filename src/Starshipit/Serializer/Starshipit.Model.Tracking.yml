@@ -1,0 +1,10 @@
+Starshipit\Model\Tracking:
+  properties:
+    success:
+      type: int
+    errors:
+      type: array<Starshipit\Model\Error>
+    tracking:
+      type: Starshipit\Model\TrackingDetails
+      serialized_name: results
+

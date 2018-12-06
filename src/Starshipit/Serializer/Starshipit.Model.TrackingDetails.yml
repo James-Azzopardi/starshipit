@@ -1,0 +1,24 @@
+Starshipit\Model\TrackingDetails:
+  properties:
+    order_number:
+      type: string
+    order_status:
+      type: string
+    carrier_name:
+      type: string
+    carrier_service:
+      type: string
+    tracking_number:
+      type: string
+    shipment_date:
+      type: string
+    tracking_status:
+      type: string
+    carrier_service_code:
+      type: string
+    last_updated_date:
+      type: DateTime<'Y-m-d\TH:i:s.u\Z'>
+    tracking_events:
+      type: array<Starshipit\Model\TrackingEvents>
+      serialized_name: tracking_events
+

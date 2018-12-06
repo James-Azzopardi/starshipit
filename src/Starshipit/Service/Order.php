@@ -110,5 +110,44 @@
                 'json'
             );
         }
+
+        /**
+         * @param string $id
+         * @return Model\Order|object
+         */
+
+        public function search($phrase)
+        {
+            try {
+                $result = $this->getClient()->get(
+                    sprintf('orders/search?phrase=%s', $phrase),
+                    [
+                        'headers' => [
+                            'Content-Type'              => 'application/json',
+                            'StarShipIT-Api-Key'        => $this->getAuthorization()->getApiKey(),
+                            'Ocp-Apim-Subscription-Key' => $this->getAuthorization()->getSubscriptionKey(),
+                            'User-Agent'                => $this->getAuthorization()->getUserAgent(),
+                        ],
+                    ]
+                );
+            } catch (BadResponseException $exception) {
+                throw new ApiException(
+                    $this->getSerializer()->deserialize(
+                        (string) Psr7\stream_for($exception->getResponse()->getBody())->getContents(),
+                        ErrorResponse::class,
+                        'json'
+                    ),
+                    $exception
+                );
+            }
+
+            // echo '<pre>';
+            // print_r($result->getBody()->getContents());
+            // return $this->getSerializer()->deserialize(
+            //     (string) $result->getBody(),
+            //     OrderModel::class,
+            //     'json'
+            // );
+        }
     }
 
