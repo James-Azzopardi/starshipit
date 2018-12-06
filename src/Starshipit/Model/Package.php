@@ -221,7 +221,7 @@ class Package
      */
     public function getTrackingNumber()
     {
-        return $this->$tracking_number;
+        return $this->tracking_number;
     }
 
     /**
@@ -230,7 +230,7 @@ class Package
      */
     public function setTrackingNumber($tracking_number)
     {
-        $this->$tracking_number = $tracking_number;
+        $this->tracking_number = $tracking_number;
 
         return $this;
     }
