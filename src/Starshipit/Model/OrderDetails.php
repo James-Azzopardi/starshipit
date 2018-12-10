@@ -180,6 +180,25 @@ class OrderDetails
     }
 
     /**
+     * @param string $CarrierName
+     * @return $this
+     */
+    public function setCarrierName($carrier_name)
+    {
+        $this->carrier_name = $carrier_name;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCarrierName()
+    {
+        return $this->carrier_name;
+    }
+
+    /**
      * @param string $CarrierServiceCode
      * @return $this
      */
