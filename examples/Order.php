@@ -9,7 +9,7 @@
     $order         = new \Starshipit\Model\Order();
 
     $order_details->setOrderDate(new DateTime)
-                  ->setOrderNumber(rand().'_001')
+                  ->setOrderNumber(rand().'-001')
                   ->setReference('Online Order')
                   ->setShippingMethod('Express')
                   ->setSignatureRequired(false);

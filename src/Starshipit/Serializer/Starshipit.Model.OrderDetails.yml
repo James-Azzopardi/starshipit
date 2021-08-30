@@ -6,7 +6,7 @@ Starshipit\Model\OrderDetails:
     order_date:
       type: DateTime<'Y-m-d\TH:i:s.u\Z'>
     order_number:
-      type: int
+      type: string
     reference:
       type: string
     carrier:

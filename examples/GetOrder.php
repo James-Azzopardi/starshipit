@@ -13,3 +13,12 @@
     echo '<pre>';
     print_r($order);
 
+    // If Not using Starshipit ID reference
+
+    $order_number = '';
+
+    $order = Api::order($authorization)->get_order_number($order_number);
+
+    echo '<pre>';
+    print_r($order);
+

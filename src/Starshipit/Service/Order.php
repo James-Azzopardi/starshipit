@@ -114,6 +114,44 @@
         /**
          * @param string $id
          * @return Model\Order|object
+         * Additonal Function to get order based on order number instead of Starshipit reference.
+         */
+
+        public function get_order_number($id)
+        {
+            try {
+                $result = $this->getClient()->get(
+                    sprintf('orders?order_number=%s', $id),
+                    [
+                        'headers' => [
+                            'Content-Type'              => 'application/json',
+                            'StarShipIT-Api-Key'        => $this->getAuthorization()->getApiKey(),
+                            'Ocp-Apim-Subscription-Key' => $this->getAuthorization()->getSubscriptionKey(),
+                            'User-Agent'                => $this->getAuthorization()->getUserAgent(),
+                        ],
+                    ]
+                );
+            } catch (BadResponseException $exception) {
+                throw new ApiException(
+                    $this->getSerializer()->deserialize(
+                        (string) Psr7\stream_for($exception->getResponse()->getBody())->getContents(),
+                        ErrorResponse::class,
+                        'json'
+                    ),
+                    $exception
+                );
+            }
+
+            return $this->getSerializer()->deserialize(
+                (string) $result->getBody(),
+                OrderModel::class,
+                'json'
+            );
+        }
+
+        /**
+         * @param string $id
+         * @return Model\Order|object
          */
 
         public function search($phrase)
